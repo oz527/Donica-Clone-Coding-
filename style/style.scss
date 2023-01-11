@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap");
+@import "variables";
+@import "elements";
+@import "reset.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "PT Serif", serif;
+  background-color: #fff;
+  color: $black;
+  padding: 30px 40px;
+  line-height: 1.2;
+}
+
+header {
+  font-size: 46px;
+  letter-spacing: 1px;
+  margin-bottom: 175px;
+}
+
+.works {
+  margin-bottom: 80px;
+  .works__header {
+    @extend %grid;
+    padding-bottom: 10px;
+    span {
+      @extend %tinyText;
+    }
+  }
+  .works__list {
+    .works__work {
+      cursor: pointer;
+      font-size: 20px;
+      border-top: 1px solid $black;
+      padding: 20px 0;
+      @extend %grid;
+      &:hover {
+        font-style: italic;
+      }
+    }
+  }
+}
+
+.cv {
+  margin-bottom: 120px;
+}
+
+.cv,
+.about {
+  font-size: 30px;
+  span {
+    @extend %tinyText;
+  }
+}
+
+a {
+  &:hover {
+    font-style: italic;
+  }
+}
